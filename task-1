@@ -1,0 +1,10 @@
+Task: To write code that accepts input 'str' and changes its characters to upper letters and bigger to smaller. Example: ‘Test’ ⇒ ‘tEST’;
+(Завдання: Написати код, яка на вході приймає стрічку і змінює всі малі букви на великі, а великі на малі. Тобто ‘Test’ ⇒ ‘tEST’;)
+
+
+let str = 'Test';
+
+let newStr = '';
+let result = str.charAt(0).toLowerCase() + str.slice(1).toUpperCase();
+
+console.log(result);
