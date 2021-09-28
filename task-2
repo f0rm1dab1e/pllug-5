@@ -1,0 +1,8 @@
+Написати скріпт, який призведе до краху вкладки в браузері(пам’ятайте про ліміти!);
+Write a script that will cause crash in the browser (remember about the limits!);
+
+/////Script
+
+for (let i = 1; i < 0; i++) {
+  console.log(i);
+}
