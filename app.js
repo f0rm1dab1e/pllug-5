@@ -45,3 +45,38 @@ let newObj = {};
   return newObj;
 }
 console.log(isInteger({a: 22, b: -11.35, c: 41.2, d: 'hello'})); // {a: 22, c: 41.2}
+
+// HW-Lesson-4 (Part 2)
+// Скрипт який виводить в консоль дату і час коли DOM побудований, але css, зображення ще не завантажились.
+document.addEventListener("DOMContentLoaded", ()=> {
+  console.log(Date());
+});
+
+// Скрипт який виводить в консоль дату і час коли DOM побудований і css, зображення вже завантажились.
+window.onload = () => {
+  console.log(Date());
+};
+
+// Скрипт який виводить в консоль дату і час коли юзер натиснув на закрити вкладку або перезавантажити сторінку.
+window.onbeforeunload = ()=> {
+  console.log(Date());
+};
+
+// Скрипт який виводить повертає назву браузера та назву операційної системи через дефіс "-" як одну строку.
+console.log(navigator.appCodeName + "-" + navigator.platform);
+
+// Скрипт який змушує браузер показувати сповіщення, коли ви намагаєтесь перезавантажити сторінку, видалити вкладку, чи вимкнути браузер.
+window.onbeforeunload = () =>{
+  return false;
+};
+
+
+// Скрипт який виводить в консоль скільки секунд юзер перебував на сторінці, після того як юзер натиснув на закрити вкладку або перезавантажити сторінку.
+window.onload = () => {
+  start = new Date();
+}
+
+window.onbeforeunload = () => {
+  end = new Date();
+  console.log((start.getTime() - end.getTime()) / 1000);
+}
